@@ -11,38 +11,37 @@ export const styles = StyleSheet.create({
         borderRadius: 12,
         flexDirection: "row",
         gap: 16,
-        alignItems:"center",
-    },
-    image:{
+        alignItems: "center",
+      },
+      image: {
         width: 116,
-        height:104,
+        height: 104,
         backgroundColor: colors.gray[200],
         borderRadius: 8,
-    },
-    content:{
+      },
+      content: {
         flex: 1,
         gap: 4,
-    },
-    name: {
+      },
+      name: {
         fontSize: 14,
         fontFamily: fontFamily.medium,
         color: colors.gray[600],
-    },
-    description:{
+      },
+      description: {
         fontSize: 12,
         fontFamily: fontFamily.regular,
         color: colors.gray[500],
-    },
-
-    footer:{
+      },
+      footer: {
         flexDirection: "row",
         gap: 7,
         marginTop: 10,
-    },
-    tickets: {
+      },
+      tickets: {
         fontSize: 12,
         fontFamily: fontFamily.regular,
         color: colors.gray[400],
-    },
+      },
 
 })

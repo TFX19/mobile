@@ -18,6 +18,7 @@ export default function Home(){
     async function fetchCategories(){
         try {
             const { data } = await api.get("/categories")
+            console.log("Categorias:", data);
             setCategories(data)
             setCategory(data[0].id)
         } catch (error) {
@@ -28,17 +29,17 @@ export default function Home(){
 
     async function fetchMarkets() {
         try {
-            if(!category){
-                return
-            }
+          if (!category) {
+            return
+          }
 
-            const { data } = await api.get("/markets/category" + category)
-            setMarkets(data)
+          const { data } = await api.get("/markets/category/" + category)
+          setMarkets(data)
         } catch (error) {
-            console.log(error)
-            Alert.alert("Locais", "Nao foi possivel localizar locais")
+          console.log(error)
+          Alert.alert("Locais", "Não foi possível carregar os locais.")
         }
-    }
+      }
 
     useEffect(() =>{
         fetchCategories()
